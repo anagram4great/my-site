@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Greta — UX Designer available for freelance projects.">
+  <title>Contact — Greta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Greta<span>.</span></a>
+      <div class="nav__links">
+        <a href="../work/index.html"    class="nav__link">Work</a>
+        <a href="../about/index.html"   class="nav__link">About</a>
+        <a href="../contact/index.html" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="s-label">Contact</span>
+      <h1 class="page-hero__hed">Let's make<br>something great.</h1>
+      <p class="page-hero__sub">
+        Whether you have a project brief, a rough idea, or just want to
+        say hello — my inbox is always open.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── Contact Body ── -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left — info -->
+        <div class="contact-info">
+          <h2 class="contact-info__hed">The best projects start with a conversation.</h2>
+          <p class="contact-info__p">
+            I'm currently available for freelance and contract work.
+            I work best with teams that care deeply about the people
+            using their products.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <div class="contact-detail__label">Email</div>
+              <a href="mailto:hello@gretadesigns.com" class="contact-detail__val">
+                hello@gretadesigns.com
+              </a>
+            </div>
+            <div>
+              <div class="contact-detail__label">Response time</div>
+              <div class="contact-detail__val">Within 24 hours</div>
+            </div>
+            <div>
+              <div class="contact-detail__label">Availability</div>
+              <div class="contact-detail__val" style="color: var(--accent);">
+                ● Open to projects
+              </div>
+            </div>
+          </div>
+
+          <div class="socials">
+            <a href="#" class="social-btn">LinkedIn</a>
+            <a href="#" class="social-btn">Dribbble</a>
+            <a href="#" class="social-btn">Read.cv</a>
+            <a href="#" class="social-btn">Twitter / X</a>
+          </div>
+        </div>
+
+        <!-- Right — form -->
+        <div class="contact-form-wrap">
+          <form action="#" method="post" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="Ada"
+                  required
+                  autocomplete="given-name"
+                >
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Lovelace"
+                  autocomplete="family-name"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ada@example.com"
+                required
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company">Company / Project (optional)</label>
+              <input
+                class="form-input"
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Acme Inc."
+                autocomplete="organization"
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="type">What are you looking for?</label>
+              <select class="form-select" id="type" name="type">
+                <option value="" disabled selected>Select a project type</option>
+                <option value="ux-research">UX Research</option>
+                <option value="product-design">Product Design</option>
+                <option value="design-system">Design System</option>
+                <option value="audit">UX Audit</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Tell me more</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                placeholder="Describe your project, timeline, and anything else you think is relevant. The more context, the better."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg" style="width: 100%; justify-content: center;">
+              Send message →
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__body">
+        <div class="footer__brand">
+          <a href="../index.html" class="nav__logo">Greta<span>.</span></a>
+          <p>UX Designer crafting experiences that feel effortless.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Navigation</h5>
+          <a href="../work/index.html">Work</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Connect</h5>
+          <a href="#">LinkedIn</a>
+          <a href="#">Dribbble</a>
+          <a href="#">Read.cv</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Greta. All rights reserved.</span>
+        <span>Designed &amp; built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
