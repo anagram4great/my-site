@@ -30,7 +30,6 @@
       emoji.textContent = m.e;
       tempE.textContent = `${t}°F`;
       desc.textContent = `${m.t} • Wind ${Math.round(cw.windspeed)} ${data.hourly_units?data.hourly_units.windspeed||'km/h':'km/h'}`;
-      src.textContent = `Updated ${new Date(cw.time).toLocaleTimeString()}`;
       try{
         const gurl=`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${lat}&longitude=${lon}&language=en&count=1`;
         const gr=await fetch(gurl);
@@ -42,10 +41,10 @@
           }
         }
       }catch(e){}
-    }catch(e){desc.textContent='Unable to load weather.';src.textContent=''}
+    }catch(e){desc.textContent='';src.textContent=''}
   }
 
-  function useFallback(){loc.textContent='New York, US';src.textContent='Default location';fetchWeather(40.7128,-74.0060)}
+  function useFallback(){loc.textContent='New York, US';src.textContent='';fetchWeather(40.7128,-74.0060)}
 
   let dragging=false,startX=0,startY=0,startLeft=0,startTop=0;
   function clamp(v,a,b){return Math.min(b,Math.max(a,v))}
@@ -58,5 +57,5 @@
 
   // init
   try{const pos=JSON.parse(localStorage.getItem('weather.pos')||'null');if(pos&&pos.left&&pos.top){widget.style.left=pos.left;widget.style.top=pos.top;widget.style.right='auto';widget.style.bottom='auto'}}catch(e){}
-  if('geolocation' in navigator){navigator.geolocation.getCurrentPosition(p=>{src.textContent='';fetchWeather(p.coords.latitude,p.coords.longitude)},err=>{desc.textContent=err&&err.code===1? 'Location blocked — showing general forecast.':'Unable to access location — showing a general forecast.';useFallback()},{timeout:10000})}else{desc.textContent='Location unavailable — showing general forecast.';useFallback()}
+  if('geolocation' in navigator){navigator.geolocation.getCurrentPosition(p=>{src.textContent='';fetchWeather(p.coords.latitude,p.coords.longitude)},()=>{useFallback()},{timeout:10000})}else{useFallback()}
 })();
